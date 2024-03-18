@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Change to the root directory of the Maven project
+# cd ../../
+
+# Build the Maven project
+mvn clean install
+
+# Check if the Maven build was successful
+if [ $? -ne 0 ]; then
+  echo "Maven build failed. Please fix errors before committing."
+  exit 1
+fi
+
+# Return to the original working directory
+cd -
