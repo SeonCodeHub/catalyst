@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Build the Maven project
+mvn clean install
+
+# Check if the Maven build was successful
+if [ $? -ne 0 ]; then
+  echo "Maven build failed. Please fix errors before committing."
+  exit 1
+fi
